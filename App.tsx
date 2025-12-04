@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { 
-  Check, 
-  BookOpen, 
-  Calendar, 
-  Layout, 
-  MonitorPlay, 
-  GraduationCap, 
-  TrendingUp, 
+import {
+  Check,
+  BookOpen,
+  Calendar,
+  Layout,
+  MonitorPlay,
+  GraduationCap,
+  TrendingUp,
   BrainCircuit,
   Menu,
   X,
@@ -15,14 +15,14 @@ import {
 
 // --- Icons & UI Components ---
 
-const Button: React.FC<{ 
-  children: React.ReactNode; 
-  variant?: 'primary' | 'secondary' | 'outline'; 
+const Button: React.FC<{
+  children: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'outline';
   className?: string;
   onClick?: () => void;
 }> = ({ children, variant = 'primary', className = '', onClick }) => {
   const baseStyles = "px-8 py-4 font-bold text-lg uppercase tracking-wide transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg rounded-none";
-  
+
   const variants = {
     primary: "bg-aurea-tangerine text-white hover:bg-orange-600",
     secondary: "bg-aurea-blue text-white hover:bg-blue-800",
@@ -36,8 +36,8 @@ const Button: React.FC<{
   );
 };
 
-const SectionTitle: React.FC<{ children: React.ReactNode; color?: string; align?: 'left' | 'center' }> = ({ 
-  children, 
+const SectionTitle: React.FC<{ children: React.ReactNode; color?: string; align?: 'left' | 'center' }> = ({
+  children,
   color = 'text-aurea-ebony',
   align = 'left'
 }) => (
@@ -67,15 +67,10 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
-           {/* Abstract Logo Representation based on PDF geometry */}
-           <div className="relative w-8 h-8 flex items-center justify-center">
-             <div className="absolute inset-0 border-2 border-white rounded-full"></div>
-             <div className="absolute h-full w-[2px] bg-white"></div>
-             <div className="absolute w-[60%] h-[60%] border-2 border-white rounded-t-full bottom-0"></div>
-           </div>
-           <span className="font-logo text-3xl text-white font-medium tracking-tight">
-             áurea
-           </span>
+          {/* Logo Image */}
+          <img src="/aurea.png" alt="Áurea Logo" className="h-10 w-auto object-contain" />
+          <span className="font-logo text-3xl text-white font-medium tracking-tight">
+          </span>
         </div>
 
         {/* Desktop Nav */}
@@ -119,10 +114,10 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl">
           <h1 className="font-display text-5xl md:text-8xl uppercase leading-[0.9] mb-6">
-            Curso de Matemática<br/>
+            Curso de Matemática<br />
             <span className="text-transparent stroke-white" style={{ WebkitTextStroke: '2px white' }}>Áurea 2025</span>
           </h1>
-          
+
           <h2 className="text-xl md:text-2xl font-light mb-8 max-w-2xl text-gray-200">
             Matemática descomplicada para Enem e vestibulares tradicionais
           </h2>
@@ -156,7 +151,7 @@ const WhyDifferent = () => {
               </p>
             </div>
           </div>
-          
+
           <div className="bg-gray-50 p-8 md:p-12 border-l-4 border-aurea-tangerine shadow-sm">
             <ChecklistItem>Método único que aproxima Matemática do cotidiano</ChecklistItem>
             <ChecklistItem>Curso completo com aulas práticas e teóricas</ChecklistItem>
@@ -197,7 +192,7 @@ const Structure = () => {
     <section id="estrutura" className="py-20 bg-aurea-ebony text-white">
       <div className="container mx-auto px-6">
         <SectionTitle color="text-white">Como funciona o Curso de Matemática Áurea 2025?</SectionTitle>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {blocks.map((block, i) => (
             <div key={i} className="bg-gray-900/50 p-8 border border-gray-800 hover:border-aurea-blue transition-colors group">
@@ -221,21 +216,21 @@ const Professor = () => {
         <div className="grid md:grid-cols-12 gap-12 items-center">
           {/* Abstract Image Placeholder for Hamilton */}
           <div className="md:col-span-5 relative">
-             <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden rounded-sm">
-                <img 
-                  src="hamilton.jpg" 
-                  alt="Professor Hamilton Vinícius" 
-                  className="object-cover w-full h-full mix-blend-multiply opacity-90"
-                />
-                <div className="absolute inset-0 bg-aurea-blue mix-blend-color opacity-0"></div>
-             </div>
-             {/* Geometric accent */}
-             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-aurea-tangerine rounded-full z-[-1]"></div>
+            <div className="aspect-[4/5] bg-gray-200 relative overflow-hidden rounded-sm">
+              <img
+                src="hamilton.jpg"
+                alt="Professor Hamilton Vinícius"
+                className="object-cover w-full h-full mix-blend-multiply opacity-90"
+              />
+              <div className="absolute inset-0 bg-aurea-blue mix-blend-color opacity-0"></div>
+            </div>
+            {/* Geometric accent */}
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-aurea-tangerine rounded-full z-[-1]"></div>
           </div>
 
           <div className="md:col-span-7">
             <SectionTitle>Hamilton será o seu professor de Matemática</SectionTitle>
-            
+
             <div className="space-y-6 text-lg text-gray-700 mb-8">
               <p className="font-medium text-xl">Hamilton Vinícius é mestre em Modelagem Computacional e especialista em Enem.</p>
               <p>Une Matemática, tecnologia e experiência de sala de aula para criar um curso dinâmico e direto.</p>
@@ -283,13 +278,13 @@ const Benefits = () => {
 
   return (
     <section className="py-24 bg-aurea-blue text-white relative">
-       {/* Circle overlay */}
-       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-aurea-tangerine rounded-full opacity-10 blur-3xl pointer-events-none"></div>
+      {/* Circle overlay */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-aurea-tangerine rounded-full opacity-10 blur-3xl pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <SectionTitle color="text-white" align="center">Benefícios da Turma de Matemática</SectionTitle>
-          
+
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-4 mt-12 bg-white/10 p-8 md:p-12 backdrop-blur-sm rounded-sm border border-white/20">
             {benefits.map((benefit, i) => (
               <div key={i} className="flex items-start gap-3">
@@ -306,26 +301,26 @@ const Benefits = () => {
   );
 };
 
-const PricingCard = ({ 
-  title, 
-  subtitle, 
-  price, 
-  installment, 
+const PricingCard = ({
+  title,
+  subtitle,
+  price,
+  installment,
   discounts
-}: { 
-  title: string, 
-  subtitle: string, 
-  price: string, 
-  installment: string, 
+}: {
+  title: string,
+  subtitle: string,
+  price: string,
+  installment: string,
   discounts: { title: string, items: string[] }
 }) => (
   <div className="flex flex-col h-full p-8 border border-gray-200 bg-white text-aurea-ebony shadow-lg transition-transform duration-300 hover:-translate-y-2 relative overflow-hidden group">
     {/* Top accent bar */}
     <div className="absolute top-0 left-0 w-full h-1 bg-aurea-blue group-hover:bg-aurea-tangerine transition-colors duration-300"></div>
-    
+
     <h3 className="font-display text-3xl uppercase mb-2 text-aurea-blue mt-2">{title}</h3>
     <p className="text-sm mb-8 h-10 text-gray-500">{subtitle}</p>
-    
+
     <div className="mb-8">
       <div className="text-sm uppercase tracking-wide opacity-70 mb-1">Preço à vista</div>
       <div className="text-4xl font-bold font-display text-aurea-ebony">{price}</div>
@@ -375,21 +370,21 @@ const Pricing = () => {
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <PricingCard 
+          <PricingCard
             title="Matemática Extensivo"
             subtitle="Para estudar o ano inteiro com ritmo constante"
             price="R$ 1.800,00"
             installment="10 x R$ 220,00"
             discounts={discountData}
           />
-          <PricingCard 
+          <PricingCard
             title="Matemática Intensivo"
             subtitle="Para quem precisa acelerar o processo"
             price="R$ 1.100,00"
             installment="10 x R$ 150,00"
             discounts={discountData}
           />
-          <PricingCard 
+          <PricingCard
             title="Matemática Online"
             subtitle="Para estudar com flexibilidade"
             price="R$ 600,00"
@@ -412,7 +407,7 @@ const Combo = () => {
               Oferta Especial
             </div>
             <h2 className="font-display text-4xl md:text-5xl uppercase leading-none mb-6">
-              Combo Matemática<br/>e Redação Áurea
+              Combo Matemática<br />e Redação Áurea
             </h2>
             <p className="text-xl mb-8 opacity-90 leading-relaxed">
               Para quem quer crescer nas duas áreas que mais impactam a nota do Enem, o Áurea oferece um combo especial que une Matemática e Redação com planejamento integrado.
@@ -458,7 +453,7 @@ const ContactSection = () => {
   const contacts = [
     {
       initial: 'A',
-      name: 'Alysson Luiz Freitas',
+      name: 'Alysson Freitas',
       role: 'SÓCIO DIRETOR',
       action: 'Falar com Alysson'
     },
@@ -500,7 +495,7 @@ const ContactSection = () => {
               </div>
               <h3 className="font-bold text-xl text-aurea-ebony mb-2">{contact.name}</h3>
               <p className="text-sm text-gray-400 uppercase tracking-widest font-bold mb-8">{contact.role}</p>
-              
+
               <button className="w-full bg-[#25D366] hover:bg-[#1da851] text-white py-3 px-6 rounded-full font-bold flex items-center justify-center gap-2 transition-colors shadow-lg shadow-green-200">
                 <MessageCircle size={20} />
                 <span>{contact.action}</span>
@@ -521,7 +516,7 @@ const Footer = () => {
           <h2 className="font-display text-4xl md:text-6xl uppercase mb-8 leading-tight">
             Domine a Matemática e transforme a sua nota em 2025
           </h2>
-          
+
           <p className="text-gray-400 text-lg md:text-xl mb-12 leading-relaxed">
             Se você sente que a Matemática ainda é um bloqueio, este curso foi feito para você.
             Com metodologia clara, materiais completos e acompanhamento durante todo o ano, a disciplina deixa de ser um problema e passa a ser seu diferencial.
@@ -531,13 +526,8 @@ const Footer = () => {
             Quero garantir minha vaga no Curso de Matemática Áurea 2025
           </Button>
 
-          <div className="mt-20 pt-10 border-t border-gray-800 flex flex-col items-center">
-             <div className="relative w-8 h-8 flex items-center justify-center mb-4">
-               <div className="absolute inset-0 border-2 border-gray-600 rounded-full"></div>
-               <div className="absolute h-full w-[2px] bg-gray-600"></div>
-               <div className="absolute w-[60%] h-[60%] border-2 border-gray-600 rounded-t-full bottom-0"></div>
-             </div>
-             <p className="text-gray-600 text-sm">© 2024 Áurea Educação. Todos os direitos reservados.</p>
+          <div className="mt-20 pt-10 border-t border-gray-800">
+            <p className="text-gray-600 text-sm text-center">© 2024 Áurea Educação. Todos os direitos reservados.</p>
           </div>
         </div>
       </div>
