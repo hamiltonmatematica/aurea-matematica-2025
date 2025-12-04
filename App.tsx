@@ -168,7 +168,7 @@ const Structure = () => {
   const blocks = [
     {
       title: "Carga horária semanal",
-      desc: "Aulas as Terças das 19h às 22h.",
+      desc: "Aulas as Terças das 19h às 22h. Início: 24 de fevereiro.",
       icon: <Calendar size={32} />
     },
     {
@@ -365,9 +365,14 @@ const Pricing = () => {
     <section id="precos" className="py-24 bg-gray-50">
       <div className="container mx-auto px-6">
         <SectionTitle align="center">Escolha sua modalidade</SectionTitle>
-        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-16 -mt-4">
+        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-4 -mt-4">
           Invista no seu futuro com o melhor custo-benefício.
         </p>
+        <div className="text-center mb-12">
+          <div className="inline-block bg-aurea-blue text-white px-6 py-3 rounded-sm font-bold text-lg">
+            📅 Início do curso: 24 de fevereiro de 2025
+          </div>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <PricingCard
