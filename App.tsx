@@ -415,9 +415,9 @@ const Combo = () => {
             <p className="text-lg opacity-90 mb-8">
               O aluno recebe condições especiais e acompanhamento nas duas disciplinas.
             </p>
-            <button className="bg-aurea-ebony text-white px-8 py-4 font-bold uppercase hover:bg-gray-900 transition-colors">
+            <a href="https://comboaurea2026.netlify.app/" target="_blank" rel="noopener noreferrer" className="inline-block bg-aurea-ebony text-white px-8 py-4 font-bold uppercase hover:bg-gray-900 transition-colors">
               Acessar página do combo
-            </button>
+            </a>
           </div>
 
           <div className="bg-white/10 p-8 md:p-12 border border-white/20 backdrop-blur-sm">
