@@ -267,7 +267,6 @@ const Professor = () => {
 const Benefits = () => {
   const benefits = [
     "30% de desconto até 31/12 para alunos novos",
-    "50% de desconto até 31/12 para alunos Áurea",
     "Acesso à plataforma Áurea Prime",
     "Turma presencial ou online",
     "Material gratuito",
@@ -357,7 +356,6 @@ const Pricing = () => {
     title: "Até 31/12",
     items: [
       "30% de desconto para alunos novos",
-      "50% de desconto para alunos Áurea",
     ]
   };
 
